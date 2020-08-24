@@ -42,7 +42,460 @@ header {
 img {
 
   max-width: 7%;
+}@import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway:400,700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(218, 28%, 13%);         /*hsl(218, 28%, 13%)*/
+  color: #c5c0d1;              /*c5c0d1*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: hsl(217, 28%, 15%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 700px;
+}
+
+
+
+
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+
+
+
+/*p {
+  line-height: 1.5;
+  color: #c5c0d1;
+
+}*/
+
+/* Name */
+
+.name  {
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  position: relative;
+  top: 400px;
+  }
+
+  .kawika{
+  position: absolute;
+  bottom: 54%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: consolas;
+  letter-spacing: 5px;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  white-space: nowrap;
+
+
+}
+
+.kawika::before
+{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+  border-right: transparent;
+  animation: type 4s steps(36);
+
+}
+
+
+  @keyframes type {
+    0% {
+      width: 0;
+      border-right: 3px solid white;
+
+    }
+
+    95% {
+      width: 100%;
+
+    }
+
+    100%{
+      width: 100%;
+      border-right: 3px solid white;
+    }
+
+  }
+hr.line{
+  border: 2px solid #b5a5e6;
+  border-radius: 5px;
+  width: 20%;
+}
+
+hr.lineA{
+  border: 3px solid #1f3e70;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  right: 250px;
+  bottom: 50px;
+}
+
+hr.lineB{
+  border: 3px solid #1f3e70;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  right: 250px;
+  bottom: 50px;
+}
+
+hr.lineEx{
+  border: 3px solid #1f3e70;
+  border-radius: 5px;
+  width: 10%;
+  position: relative;
+  right: 40px;
+  bottom: 25px;
+}
+
+/* Nav Styling */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+
+.nav-ul {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right:  20px;
+  list-style-type: none;
+  position: relative;
+  top: 700px;
+
+}
+
+.nav-ul li a {
+
+  font-weight: bold;
+  width:auto;
+  display: inline-block;
+  color: #b5a5e6;
+  font-family: 'Raleway', sans-serif;
+  padding: 0px 20px;
+  text-decoration: none;
+
+}
+
+.nav-ul li a:hover{
+  color:#fff;
+  font-weight: bolder;
+}
+
+
+
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 900px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: grey; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 20%; /* Rounded corners */
+  font-size: 12px; /* Increase font size */
+  opacity: 0.3;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  opacity: 0.4;
+}
+
+
+/*hero styling*/
+
+.transbox {
+  background: rgba(105, 105, 105, 0.1);
+  border: 1px solid black;
+  height: 200px;
+
+}
+
+.transboxEx {
+  background: rgba(105, 105, 105, 0.1);
+  border: 0px solid black;
+  height: 400px;
+  position: relative;
+  right: 350px;
+
+}
+
+.aboutme {
+
+  padding-top: 200px;
+  margin: 20px auto;
+  max-width: 100%;
+  width: 600px;
+  text-align: center;
+}
+
+.aboutme p{
+
+  line-height: 1.5;
+  color: #c5c0d1;
+}
+
+.about{
+
+  text-align: center;
+  position: relative;
+  right: 250px;
+  bottom: 20px;
+
+}
+/*edu and exp*/
+.experience{
+  padding-top: 400px;
+  margin: 20px auto;
+  max-width: 100%;
+  width: 600px;
+  text-align: center;
+  position: relative;
+  left: 50px;
+}
+
+.exp{
+  text-align: center;
+  position: relative;
+  right: 250px;
+  bottom: 20px;
+}
+
+.exp-ul {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: left;
+  padding-right:  20px;
+  list-style-type: none;
+  position: relative;
+  right: 120px;
+  top: 67px;
+}
+
+.exp-ul li {
+
+  font-weight: bold;
+  width:auto;
+  display: inline-block;
+  color: #c5c0d1;
+  font-family: 'Raleway', sans-serif;
+  padding: 3px 20px;
+  text-decoration: none;
+
+}
+
+.exp-ul p{
+  color: #fff;
+  position: relative;
+  top: 30px;
+}
+
+.exp2-ul {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: left;
+  padding-right:  20px;
+  list-style-type: none;
+  position: relative;
+  left: 100px;
+  bottom: 150px;
+}
+
+.exp2-ul li {
+
+  font-weight: bold;
+  width:auto;
+  display: inline-block;
+  color: #c5c0d1;
+  font-family: 'Raleway', sans-serif;
+  padding: 3px 20px;
+  text-decoration: none;
+
+}
+
+.exp2-ul p{
+  color: #fff;
+  position: relative;
+  top: 30px;
+}
+
+.textA{
+  text-align: center;
+  position: relative;
+  right: 50px;
+  bottom: -10px;
+}
+
+.edu{
+  position: relative;
+  right: 30px;
+}
+
+.edu p{
+  position: relative;
+  right: 200px;
+}
+
+/*end of edu and experience*/
+
+
+/*projects*/
+
+.projects{
+  padding-top: 400px;
+  margin: 20px auto;
+  max-width: 100%;
+  width: 600px;
+  text-align: center;
+  position: relative;
+  left: 220px;
+}
+
+.project{
+  text-align: center;
+  position: relative;
+  right: 250px;
+  bottom: 20px;
+}
+
+
+
+
+h1 {
+  line-height: 1.5;
+}
+
+.btn {
+  border-radius: 50px; /*make it round*/
+  background-image: linear-gradient(to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+    );
+  border: 0;
+  color: #fff;
+  padding: 18px 80px;
+
+}
+
+.feature {
+  margin: 40px;
+  width: 400px;
+  text-align: center;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+
+/*footer*/
+
+footer {
+  background-color: hsl(217, 28%, 15%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 200px;
+}
+
+.footer-section{
+  padding-top: 180px;
+  margin: 20px auto;
+  max-width: 100%;
+  width: 600px;
+  text-align: center;
+  position: relative;
+  left: 220px;
+}
+
+.logo {
+  position: relative;
+  bottom: 200px;
+  right: 480px;
+  max-width: 1%;
+  min-width: 960px;
+
+}
+
+.logo:hover {
+  color: #76699c;
+}
+
+
+.contacts{
+  text-align: center;
+  position: relative;
+  right: 250px;
+  bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+
+
+
+
+  header {
+
+    padding-bottom: 20;
+  }
+}
+
 
 /*p {
   line-height: 1.5;
