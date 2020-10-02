@@ -14,6 +14,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   width: auto;
   position: relative;
+  overflow-x: hidden;
 
 }
 
@@ -24,6 +25,7 @@ header {
   background-position: left bottom;
   padding-bottom: 700px;
   height:900px;
+  overflow: hidden;
 }
 
 
@@ -155,73 +157,75 @@ hr.lineEx{
   bottom: 25px;
 }
 
+
+
+
+
+
 /* Nav Styling */
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
+
+#navbar {
+  margin:0;
+  overflow: hidden;
+  background-color: hsl(218, 28%, 13%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  padding-bottom: 10px;
 }
 
-
-.nav-ul {
-  margin: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right:  20px;
-  list-style-type: none;
-  position: relative;
-  top: 700px;
-
-}
-
-.nav-ul li a {
-
-  font-weight: bold;
-  width:auto;
-  display: inline-block;
-  color: #b5a5e6;
-  font-family: 'Raleway', sans-serif;
-  padding: 0px 20px;
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-
+  font-size: 20px;
+  position:relative;
+  left:550px;
 }
 
-.nav-ul li a:hover{
-  color:#fff;
-  font-weight: bolder;
+#navLi a:hover {
+  background: #ddd;
+  color: black;
 }
 
 
 
+#btn{
+  position:relative;
+  right: 500px;
+  top: 2px;
+}
 
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 900px;
+  top: 0; /* Place the button at the bottom of the page */
+  left: 20px;
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: grey; /* Set a background color */
+  background-color: hsl(218, 28%, 13%);
+
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
-  border-radius: 20%; /* Rounded corners */
-  font-size: 12px; /* Increase font size */
-  opacity: 0.3;
+
+  font-size: 20px; /* Increase font size */
+
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-  opacity: 0.4;
+  color: gray;
+
 }
 
 .wrapper{
-
+text-align:center;
 }
 
 /*hero styling*/
@@ -246,14 +250,16 @@ nav {
 
   padding-top: 200px;
   margin: 20px auto;
-  max-width: 100%;
+
   width: 600px;
   text-align: center;
+  opacity: 0;
 }
 
 .aboutme p{
+  text-align:center;
 
-  line-height: 1.5;
+  line-height: 1.6;
   color: #c5c0d1;
 }
 
@@ -274,6 +280,7 @@ nav {
   text-align: center;
   position: relative;
   left: 50px;
+  opacity: 0;
 }
 
 .exp{
@@ -369,6 +376,10 @@ nav {
 
 /*projects*/
 
+.proj{
+  opacity:0;
+}
+
 .projects{
   padding-top: 400px;
   margin: 20px auto;
@@ -377,6 +388,8 @@ nav {
   text-align: center;
   position: relative;
   left: 220px;
+
+
 }
 
 .project{
@@ -384,12 +397,16 @@ nav {
   position: relative;
   right: 250px;
   bottom: 20px;
+
+
 }
 
 #projectCont{
   position:relative;
   left:100px;
   bottom:10px;
+
+
 }
 
 
@@ -403,6 +420,7 @@ nav {
   bottom: 50px;
   right:2px;
   border-radius: 5%;
+
 
 }
 
@@ -488,6 +506,21 @@ h1 {
   line-height: 1.5;
 }
 
+
+.codes{
+  list-style-type: none;
+}
+
+.codes li{
+  text-align:center;
+  position:relative;
+  right: 20px;
+  top: 40px;
+  background: rgba(105, 105, 105, 0.1);
+  border: 1px solid black;
+  height: 50px;
+}
+
 .btn {
   border-radius: 50px; /*make it round*/
   background-image: linear-gradient(to right,
@@ -540,19 +573,47 @@ footer {
   left: 220px;
 }
 
-.logo {
+.form-elements {
   position: relative;
   bottom: 200px;
-  right: 480px;
+  right: 440px;
   max-width: 1%;
   min-width: 960px;
 
 }
 
-.logo:hover {
-  color: #76699c;
+.logo{
+
+  position:relative;
+  top: 230px;
+  right:40px;
+  text-align:center;
+
+}
+.logithub{
+  display: inline-block;
+  width:65px;
+
+  overflow:hidden;
+}
+.logithub:hover .fa-github{
+    color: red;
+    transition: 0.9s;
+    transform: rotateY(180deg);
 }
 
+.logcont{
+  display: inline-block;
+  width:65px;
+
+  overflow:hidden;
+
+}
+
+.logcont:hover .fa-envelope-o{
+  transition: 0.9s;
+  transform: rotateY(180deg);
+}
 
 .contacts{
   text-align: center;
@@ -571,4 +632,5 @@ footer {
 
   }
 }
+
 
