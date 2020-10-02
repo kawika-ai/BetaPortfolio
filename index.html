@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,51 +31,23 @@
      <div class = "name">
      <hr class="line">
      <p class="ware"><h2>Software engineer<h2><p>
-   </div>
-     <nav>
-       <ul class="nav-ul" id="nav-ul">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-
-       </ul>
-
-
-
- </nav>
-
-
-
+     </div>
 </div>
 
-</div>
+
+ <ul class="social-icons">
+    <div class="logo">
+    <ul class="logos" id="logos">
+      <div class ="logithub">
+        <a href ="https://github.com/kawika-ai"><i class="fa fa-github" style="font-size:68px;color:white;"></i></a>
+      </div>
+      <div class="logcont">
+      <a href="#contact"><i class="fa fa-envelope-o" style="font-size:60px;color:white;"></i></a>
+    </div>
+    </ul>
+  </div>
+
  </header>
-
-
-<button onclick="topFunction()" id="myBtn" title="Go to top"> BACK TO TOP </button>
-
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
 
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -84,19 +57,22 @@ function topFunction() {
 
 <div id = "wrapper">
 
+
 <a id="about">
 <div id="aboutme" class="aboutme" class="tab">
+
 <div class="transbox">
 
 
      <h1><span class="highlight"><p class ="about">About Me:</p></span></h1>
      <hr class="lineA">
 
-     <p><h4>Hey there, welcome to my web portfolio! </h4></p>
+     <p style=><h4>Hey there, welcome to my web portfolio! Student at University of Hawaii and aspiring software engineer.
+
+     </h4></p>
 </div>
 </div>
 </a>
-
 
 
 
@@ -127,6 +103,7 @@ function topFunction() {
 
 
 </div>
+
 <div class="transbox">
   <h1><span class="highlight"><p class="textA">Education:</p></span></h1>
   <hr class="lineEx">
@@ -139,54 +116,164 @@ function topFunction() {
 </div>
 
 
+<div class="proj">
 
 <div class="projects">
   <a id="project">
+
   <h1><p class="project">Projects:</p></h1>
   <hr class="lineB">
 </div>
 
 
-<div id="projectCont">
+<div id="projectCont" class="projectCont">
 
 
 
-  <img src="C:/Users/Kawika/Desktop/Swissport Project/project1.png" width="320" height="270" style="border-radius:5%;">
+  <img src="https://i.imgur.com/NuVEjZq.png" width="320" height="270" style="border-radius:5%;">
 
 
 
 <div class="transboxPro"><p class="aForm">Absentee Form</p><p class="absenteeP">Site provides a functional hawaii absentee form </p>
 <a href="https://github.com/kawika-ai/Absentee" class="gogithub">View on GitHub</a>
 <a href="https://kawika-ai.github.io/Absentee/" class="goabsensite">View site</a>
+
+<ul class="codes">
+
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
 </div>
 </div>
 
 </a>
-
+</div>
 
 <footer>
 
   <div class="footer-section">
     <a id="contact">
-    <h1><p class="contacts">Contacts:</p></h1>
+    <h1><p class="contacts">Contact:</p></h1>
     <hr class="lineB">
   </div>
 
   <div class="footer-section">
-    <ul class="social-icons">
-      <div class="logo">
-      <ul class="logos" id="logos">
-        <i class="fa fa-github" style="font-size:48px;color:white"></i>
-        <i class="fa fa-envelope-o" style="font-size:48px;color:white"></i>
-      </ul>
+    <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+   action="https://script.google.com/macros/s/AKfycbxwhXv3kn13WAntLMLRSDasnNpWG75GeaI4JAlGCw/exec">
+     <!-- change the form action to your script url -->
+
+     <div class="form-elements">
+
+        <label for="name"><h2>Name: </h2></label><br>
+         <input id="name" name="name" cols="10" placeholder="name..." /><br><br>
+
+
+
+         <label for="message"><h2>Message: </h2></label><br>
+         <textarea id="message" name="message" rows="10" cols="50"
+         placeholder="message..."></textarea><br><br>
+
+
+
+         <label for="email"> <h2>Email Address: </h2></label><br>
+         <input id="email" name="email" type="email" value=""
+         required placeholder="@email.com"/><br><br>
+
+
+       <button class="button-success pure-button button-xlarge">
+         <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
      </div>
 
+  <script data-cfasync="false" src="form-submission-handler.js"></script>
+
+  <div style="display:none; position:relative; right: 250px; bottom:100px;" class="thankyou_message">
+
+ <h2><em>Thanks</em>  for the message! I will get back to you soon!
+ </h2>
+</div>
+
+</form>
+
+
    </a>
-  </div>
+ </div> <!-- footer sect. div -->
 </footer>
+
+
+</div> <!-- wrapper div -->
+<div id="navbar">
+  <div id="btn">
+  <a id="myBtn" href="#top"> KawikaChristian </a>
+</div>
+<div id="navLi">
+ <a href="#about">About Me</a>
+ <a href="#experience">Experience</a>
+ <a href="#project">Projects</a>
+ <a href="#contact">Contact</a>
+</div>
 
 </div>
 
+<script>
+$(function(){  // $(document).ready shorthand
+  $('.wrapper').fadeIn('slow');
+});
+
+$(document).ready(function() {
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.aboutme').each( function(i){
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},1500);
+
+            }
+
+        });
+
+        $('.experience').each( function(i){
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},1500);
+
+            }
+
+        });
+
+        $('.proj').each( function(i){
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},1500);
+
+            }
+
+        });
+
+    });
+
+}); </script>
+
+
 </body>
 </html>
+
 
