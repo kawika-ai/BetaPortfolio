@@ -11,12 +11,14 @@ html {
 body {
   background-color: hsl(218, 28%, 13%);         /*hsl(218, 28%, 13%)*/
   color: #c5c0d1;              /*c5c0d1*/
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Lucida Console", Courier, monospace;
   width: auto;
-  position: relative;
+
   overflow-x: hidden;
 
 }
+
+
 
 header {
   background-color: hsl(217, 28%, 15%);
@@ -26,6 +28,7 @@ header {
   padding-bottom: 700px;
   height:900px;
   overflow: hidden;
+
 }
 
 
@@ -101,7 +104,7 @@ margin-right: auto;
   color: white;
   overflow: hidden;
   border-right: transparent;
-  animation: type 4s steps(36);
+  animation: type 2s steps(36);
 
 }
 
@@ -148,14 +151,7 @@ hr.lineB{
   bottom: 50px;
 }
 
-hr.lineEx{
-  border: 3px solid #1f3e70;
-  border-radius: 5px;
-  width: 10%;
-  position: relative;
-  right: 40px;
-  bottom: 25px;
-}
+
 
 
 
@@ -165,35 +161,72 @@ hr.lineEx{
 /* Nav Styling */
 
 
-#navbar {
+.navbar {
   margin:0;
   overflow: hidden;
   background-color: hsl(218, 28%, 13%);
   position: fixed;
   top: 0;
   width: 100%;
-
-  padding-bottom: 10px;
+  border-bottom: 7px solid #1f3e70;
+  height:60px;
 }
 
-#navbar a {
+.navbar a {
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 26px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+
+
+
+}
+
+#navLi a {
+  display:inline;
   position:relative;
-  left:550px;
+  bottom: 0px;
+  left:650px;
+  float:left;
+  animation: expand 0.7s steps(36);
+}
+
+@keyframes expand {
+  0% {
+    padding: 14px 16px;
+    font-size: 18px;
+    left:450px;
+  }
+
+  90%{
+    left: 660px;
+  }
+
+  100%{
+    padding: 14px 18px;
+    font-size: 20px;
+    left:650px;
+  }
 }
 
 #navLi a:hover {
-  background: #ddd;
-  color: black;
+font-size: 22px;
+font-weight: bold;
 }
 
+#navLi a:after {
 
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+#navLi a:hover:after { transform: scaleX(1);  }
+#navLi a.fromLeft:after{  transform-origin:  0% 50%; }
 
 #btn{
   position:relative;
@@ -202,7 +235,7 @@ hr.lineEx{
 }
 
 #myBtn {
-  display: none; /* Hidden by default */
+  /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   top: 0; /* Place the button at the bottom of the page */
   left: 20px;
@@ -232,8 +265,9 @@ text-align:center;
 
 .transbox {
   background: rgba(105, 105, 105, 0.1);
-  border: 1px solid black;
+  border: 0px solid black;
   height: 200px;
+
 
 }
 
@@ -248,12 +282,13 @@ text-align:center;
 
 .aboutme {
 
-  padding-top: 200px;
+padding-top: 300px;
   margin: 20px auto;
 
   width: 600px;
   text-align: center;
-  opacity: 0;
+
+  padding-bottom: 400px;
 }
 
 .aboutme p{
@@ -261,6 +296,13 @@ text-align:center;
 
   line-height: 1.6;
   color: #c5c0d1;
+}
+
+p.aboutpara{
+  position:relative;
+  bottom: 40px;
+  text-align: center;
+
 }
 
 .about{
@@ -273,14 +315,15 @@ text-align:center;
 }
 /*edu and exp*/
 .experience{
-  padding-top: 400px;
+  padding-top: 50px;
   margin: 20px auto;
   max-width: 100%;
   width: 600px;
   text-align: center;
   position: relative;
   left: 50px;
-  opacity: 0;
+
+  padding-bottom: 400px;
 }
 
 .exp{
@@ -363,12 +406,12 @@ text-align:center;
 
 .edu{
   position: relative;
-  right: 30px;
+
 }
 
 .edu p{
   position: relative;
-  right: 200px;
+  left: 100px;
 }
 
 /*end of edu and experience*/
@@ -376,12 +419,10 @@ text-align:center;
 
 /*projects*/
 
-.proj{
-  opacity:0;
-}
+
 
 .projects{
-  padding-top: 400px;
+  padding-top: 200px;
   margin: 20px auto;
   max-width: 100%;
   width: 600px;
@@ -454,7 +495,7 @@ p.aForm {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  bottom: 70px;
+  bottom: 78px;
   left: 20px;
   height: 60px;
   font-size: 14px;
@@ -463,8 +504,8 @@ p.aForm {
 }
 
 .gogithub:hover, .gogithub:active {
-  padding: 5px 25px;
-  font-size: 16px;
+  padding: 10px 25px;
+  font-size: 14px;
   font-weight: bolder;
   border: 3px solid white;
 }
@@ -473,7 +514,7 @@ p.aForm {
   background-color: hsl(218, 28%, 13%);
   border: 2px solid white;
   color: white;
-  padding: 18px 25px;
+  padding: 12px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -487,9 +528,9 @@ p.aForm {
 }
 
 .goabsensite:hover, .goabsensite:active {
-  padding: 15px 20px;
+  padding: 12px 20px;
   border: 3px solid white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bolder;
 }
 
@@ -506,6 +547,19 @@ h1 {
   line-height: 1.5;
 }
 
+.projo{
+  list-style-type: none;
+
+}
+
+.projectTabs{
+vertical-align: middle;
+      display: inline-block;
+      padding: 4px 30px;   /* example spacing */
+
+}
+
+
 
 .codes{
   list-style-type: none;
@@ -519,6 +573,7 @@ h1 {
   background: rgba(105, 105, 105, 0.1);
   border: 1px solid black;
   height: 50px;
+  padding-top:15px;
 }
 
 .btn {
@@ -539,17 +594,6 @@ h1 {
   text-align: center;
 }
 
-.hamburger {
-  background-color: transparent;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.hamburger:focus {
-  outline: none;
-}
 
 
 /*footer*/
@@ -573,6 +617,8 @@ footer {
   left: 220px;
 }
 
+/*contact*/
+
 .form-elements {
   position: relative;
   bottom: 200px;
@@ -582,6 +628,37 @@ footer {
 
 }
 
+textarea {
+
+}
+
+input {
+
+  width: 300px;
+  height: 50px;
+}
+
+.nameTex{
+  position: relative;
+  right: 100px;
+}
+
+.email{
+  position: relative;
+  bottom: 117px;
+  left: 250px;
+  display:inline-block;
+}
+
+.nameEmail{
+  position:relative;
+  right: 73px;
+  top: 40px;
+}
+
+
+/* Header Logo info */
+
 .logo{
 
   position:relative;
@@ -590,30 +667,79 @@ footer {
   text-align:center;
 
 }
-.logithub{
-  display: inline-block;
-  width:65px;
 
+
+.logithub{
+  position: relative;
+  right: 10px;
+  display: inline-block;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10%;
+  padding: 12px 25px;
+  height: 60px;
+  font-size: 16px;
+  width: 130px;
   overflow:hidden;
+  text-align: center;
+  text-decoration: none;
+
+  left: -1000px;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 0s;
+  animation: slide 2s forwards;
+  animation-delay: 0s;
+
 }
-.logithub:hover .fa-github{
-    color: red;
-    transition: 0.9s;
-    transform: rotateY(180deg);
+.logithub:hover{
+  font-weight:bold;
+  border: 3px solid white;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0;  }
 }
 
 .logcont{
+  position: relative;
+  left: 10px;
   display: inline-block;
-  width:65px;
-
+  color: white;
+  border: 2px solid white;
+  border-radius: 10%;
+  padding: 12px 25px;
+  height: 60px;
+  font-size: 16px;
+  width: 130px;
   overflow:hidden;
+  text-align: center;
+  text-decoration: none;
+
+  left: 1000px;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 0s;
+  animation: slide 2s forwards;
+  animation-delay: 0s;
 
 }
 
-.logcont:hover .fa-envelope-o{
-  transition: 0.9s;
-  transform: rotateY(180deg);
+
+.logcont:hover{
+  font-weight:bold;
+  border: 3px solid white;
 }
+
+
+.fphone{
+  position: relative;
+  top: 445px;
+  left: 200px;
+}
+
 
 .contacts{
   text-align: center;
@@ -622,15 +748,154 @@ footer {
   bottom: 20px;
 }
 
-@media screen and (max-width: 767px) {
+.fa-bars{display:none;
+}
+
+.dropdown {
+  display:none;
+  float:right;
+
+
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
 
 
 
+.dropdown-content {
+  display: none;
+  position: fixed;
+  right: 4px;
+  left:auto;
 
-  header {
+  background-color: hsl(218, 8%, 3%);
+
+  min-width: 360px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #c5c0d1;
+  padding: 24px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(218, 28%, 13%);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover{
+  font-weight: bold;
+  font-size:20px;
+  color: white;
+}
+
+@media screen and (max-width: 1307px) {
+
+.aboutme {
+  width: 440px;
+}
+
+.aboutH{
+  position:relative;
+  left: 100px;
+
+}
+
+  #navLi{
+    position:relative;
+    right:200px;
+  }
+
+  .experience{
 
 
+    position:relative;
+    left:200px;
+  }
+
+  .expH{
+    position:relative;
+    left:100px;
   }
 }
 
+@media screen and (max-width: 1087px) {
+  #navLi{
+    position:relative;
+    right:400px;
+  }
+
+}
+
+@media screen and (max-width: 817px) {
+
+  header {
+  }
+#navLi{ display:none;
+}
+
+.dropdown{
+  display:block;
+}
+
+.fa-bars{
+  color:white;
+}
+
+.fa-bars:hover{
+  color: red;
+}
+
+.experience{
+
+  width:550px;
+  position:relative;
+  left:350px;
+}
+
+.expH{
+  position:relative;
+  bottom: 20px;
+  left:250px;
+}
+
+.eduH{
+  position:relative;
+  right: 220px;
+  top: 40px;
+  width: 100px;
+
+}
+
+.edu{
+  position:relative;
+  right: 40px;
+  font-size: 12px;
+}
+
+.projo{
+  position:relative;
+  right:100px;
+}
+
+}
 
